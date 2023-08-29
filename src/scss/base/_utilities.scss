@@ -1,3 +1,4 @@
+@use "../abstracts" as *;
 //utility classes, sass placeholders and css custom properties
 %sr-only {
   clip: rect(0 0 0 0);
@@ -16,4 +17,21 @@
 
 %link {
   text-decoration: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+
+:root {
+  --clr-primary-400: #{$clr-primary-400};
+  --clr-primary-500: #{$clr-primary-500};
+  --clr-neutral-100: #{$clr-neutral-100};
+  --clr-neutral-900: #{$clr-neutral-900};
+
+  --clr-background: var(--clr-neutral-900);
+  --clr-text: var(--clr-neutral-100);
 }

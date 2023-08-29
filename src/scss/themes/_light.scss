@@ -1,0 +1,4 @@
+body:has(.light) {
+  --clr-background: var(--clr-neutral-100);
+  --clr-text: var(--clr-neutral-900);
+}

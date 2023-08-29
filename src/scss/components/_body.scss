@@ -1,0 +1,68 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+.body {
+  @extend .flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em 3em;
+  min-height: calc(100dvh - em(83));
+
+  h1 {
+    text-align: center;
+  }
+
+  *:not(h1) {
+    font-size: 1.15rem;
+  }
+
+  & > p {
+    width: max(65%, 30ch);
+    margin: 1em auto;
+    text-align: center;
+  }
+
+  form {
+    width: max(60%, 30ch);
+
+    input[type="url"] {
+      background-color: transparent;
+      border: 2px solid var(--clr-text);
+      padding: 0.5em 1em;
+      border-radius: 0.3em;
+      outline: transparent;
+      transition: border-color 0.3s;
+      margin-bottom: 1em;
+      width: 100%;
+
+      &:focus {
+        border-color: var(--clr-primary-400);
+      }
+
+      &:invalid:not(:placeholder-shown) {
+        border-color: var(--clr-primary-500);
+      }
+    }
+
+    .buttons {
+      @extend .flex;
+      justify-content: flex-start;
+
+      button:first-child {
+        flex: 0.7;
+      }
+
+      button:last-child {
+        flex: 0.3;
+      }
+    }
+  }
+
+  @include max(small) {
+    padding: 1em;
+
+    h1 {
+      font-size: 1.6rem;
+    }
+  }
+}

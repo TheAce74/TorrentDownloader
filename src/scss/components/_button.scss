@@ -1,0 +1,25 @@
+@use "../base" as *;
+
+.button {
+  @extend %button;
+  @extend .flex;
+  justify-content: center;
+  flex-direction: column;
+  --color: var(--clr-primary-400);
+  background-color: var(--color);
+  color: var(--clr-text);
+  border: 2px solid var(--color);
+  border-radius: 0.2em;
+  padding: 0.2em 0.8em;
+  font-weight: bold;
+  transition: all 0.3s;
+
+  &:is(:hover, :focus-visible) {
+    background-color: transparent;
+    color: var(--color);
+  }
+
+  &:active {
+    scale: 0.9;
+  }
+}
