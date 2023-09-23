@@ -18,13 +18,13 @@ The Gogoanime Torrent Downloader is a tool designed to facilitate the download o
 
 1. Clone the TorrentDownloader repository to your local machine.
 
-```
-https://github.com/TheAce74/TorrentDownloader.git
+```bash
+git clone https://github.com/TheAce74/TorrentDownloader.git
 ```
 
 2. Install the required dependencies.
 
-```
+```bash
 npm install
 ```
 
@@ -32,7 +32,7 @@ npm install
 
 1. Run the development server.
 
-```
+```bash
 npm run dev
 ```
 
