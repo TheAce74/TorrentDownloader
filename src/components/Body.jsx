@@ -134,11 +134,12 @@ function Body() {
         </div>
         <p>
           Due to changes in the official Gogoanime site (currently Anitaku), if
-          you face any issues in downloading such as the repetition of this site
-          in another tab etc., the optional url input below can be used. Note
-          that the two inputs do not expect the same url. While the first one
-          above expects the category link i.e. the link for the anime&apos;s
-          season, the second expects the link of any episode in that season.
+          you face any issues in downloading, such as the repetition of the
+          current site in another tab etc., the optional url input below should be
+          used. Note that the two inputs do not expect the same url. While the
+          first one above expects the category link i.e. the link for the
+          anime&apos;s season, the second expects the link of any episode in
+          that season.
         </p>
         <input
           type="url"
