@@ -56,6 +56,11 @@
         flex: 0.3;
       }
     }
+
+    p:last-of-type {
+      margin-block: 1em;
+      font-style: italic;
+    }
   }
 
   @include max(small) {

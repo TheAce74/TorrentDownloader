@@ -64,7 +64,7 @@ To make it easier to utilize this web app, I recommend installing the **Tab Grou
 
 ![third](./public/third.png)
 
-Before you continue with the setup, ensure you download this [config file](./public/tabgroups_rules.json).
+Before you continue with the setup, ensure you download this [config file](./public/tabgroups_rules_20240102.json).
 
 After installing, you can decide to pin it or not (I prefer pinning my favorite extensions).
 
@@ -109,3 +109,5 @@ You can choose to extract it to its own window.
 ![thirteenth](./public/thirteenth.png)
 
 Happy Downloading 💃🎉
+
+**PS:** Minor changes were made to the site due to some changes made in the parent site **Gogoanime**

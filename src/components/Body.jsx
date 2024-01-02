@@ -5,6 +5,7 @@ import Loader from "./Loader";
 
 function Body() {
   const url = useRef(null);
+  const optionalUrl = useRef(null);
   const [loader, setLoader] = useState(false);
 
   const getEpisodeCount = async (url) => {
@@ -75,6 +76,7 @@ function Body() {
     if (loader) return;
     setLoader(true);
     const link = url.current.value;
+    const link2 = optionalUrl.current.value;
     const episodes = await getEpisodeCount(link);
     const episodesArray = [];
     for (let i = 1; i <= episodes; i++) {
@@ -83,7 +85,12 @@ function Body() {
     e.target.reset();
     const downloadPageArray = [];
     episodesArray.forEach(async (episode) => {
-      const url = link.replace("category/", "").concat(`-episode-${episode}`);
+      let url;
+      if (link2 !== "") {
+        url = link2.replace(/-episode-\d+/gi, "").concat(`-episode-${episode}`);
+      } else {
+        url = link.replace("category/", "").concat(`-episode-${episode}`);
+      }
       const newUrl = await getDownloadLink(url);
       downloadPageArray.push(newUrl);
     });
@@ -125,6 +132,19 @@ function Body() {
           </Button>
           <Button handleClick={showManual}>Guide</Button>
         </div>
+        <p>
+          Due to changes in the official Gogoanime site (currently Anitaku), if
+          you face any issues in downloading such as the repetition of this site
+          in another tab etc., the optional url input below can be used. Note
+          that the two inputs do not expect the same url. While the first one
+          above expects the category link i.e. the link for the anime&apos;s
+          season, the second expects the link of any episode in that season.
+        </p>
+        <input
+          type="url"
+          ref={optionalUrl}
+          placeholder="You can paste the link of an episode (optional)"
+        />
       </form>
     </main>
   );
